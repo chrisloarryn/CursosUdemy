@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Auth0 App</a>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="/precios">Precios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" routerLink="/protegida">Protegida</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+      <button *ngIf="!auth.loggedIn" class="btn btn-outline-primary">Ingresar</button>
+      <button *ngIf="auth.loggedIn" class="btn btn-outline-danger">Salir</button>
+
+    </span>
+    </div>
+</nav>
