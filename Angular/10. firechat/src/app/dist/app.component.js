@@ -10,7 +10,8 @@ var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent(db) {
         this.title = 'firechat';
-        this.items = db.collection('items').valueChanges();
+        this.items = db.collection('chats').valueChanges();
+        this.items.subscribe(function (chats) { return console.log(chats); });
     }
     AppComponent = __decorate([
         core_1.Component({
