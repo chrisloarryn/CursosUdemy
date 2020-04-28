@@ -8,10 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
-    function AppComponent(db) {
+    function AppComponent(chatService) {
+        this.chatService = chatService;
         this.title = 'firechat';
-        this.items = db.collection('chats').valueChanges();
-        this.items.subscribe(function (chats) { return console.log(chats); });
     }
     AppComponent = __decorate([
         core_1.Component({
